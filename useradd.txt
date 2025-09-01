@@ -1,0 +1,43 @@
+1)просмотр списка пользователей системы []
+[root@localhost ~]# vim /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+
+...
+
+2)создание пользователя (в режиме администратора)
+[root@localhost ~]# useradd -m -s user1
+
+...
+user1:x:1000:1000::/home/userTest:/bin/bash
+
+ 3) смена пароля пользователя (в режиме администратора)
+
+passwd user1
+
+Changing password for user user1.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+
+4) просмотр файла с теневыми паролями пользователей (в режиме админимтратора)
+
+vim /etc/shadow
+
+user1:$6$kSRedxvIkybu/ipr$8mJPPhMRlhvPY6GyOp6lraR179A8sS9A5MwRiABkB8pC4kl5ohB
+HzLZ2nTvBDIZkn9e8menARUe/AsIKVbicL0:20332:0:99999:7:::
+
+
+
+
+
+
+
+
