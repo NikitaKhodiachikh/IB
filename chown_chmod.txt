@@ -1,0 +1,14 @@
+смена владельца файла/папки
+
+sudo chown <имя владельца>:<имя группы> <имя файла/папки>
+sudo chown user1:gtoup1 /home/nikita/Fold1
+
+смена прав доступа к файлу/папки
+
+sudo chmod 775 <имя файла/папки> 
+sudo chmod ugo-rwx <имя файла/папки>
+sudo chmod ugo+rwx <имя файла/папки>
+
+sudo chmod u+rw /home/nikita/Fold2
+
+
